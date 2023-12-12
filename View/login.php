@@ -31,7 +31,7 @@
     <form novalidate="" class="flex-grow mt-28" method="POST">
       <div class="flex flex-col rounded-lg max-w-md p-6 space-y-4 text-center bg-gray-300 mx-auto">
         <div class="text-center">
-          <?php if(isset($tap)) : ?>
+          <?php if(isset($error)) : ?>
             <i style="color:red; ">Email / password salah!</i>
           <?php endif; ?>
         </div>
