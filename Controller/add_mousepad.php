@@ -32,8 +32,6 @@ function addmousepad($add)
     $jahitan = $add["jahitan"];
     $ketebalan = $add["ketebalan"];
     $bahan = $add["bahan"];
-
-    
     
     for ($a = 0; $a < count($hrga); $a++) {
         if ($harga >= $hrga[$a]['min_harga'] && $harga <= $hrga[$a]['max_harga']) {

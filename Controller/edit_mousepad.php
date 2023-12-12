@@ -65,7 +65,7 @@ function edit($mousepad)
         $mousepad_img = cekimg();
     }
 
-    mysqli_query($conn, "UPDATE mousepad SET ukuran_id = '$ukuran' , bahan_id = '$bahan' , ketebalan_id = '$ketebalan_id' , jahitan_id = '$jahitan', harga_id = '$harga_id', merk_id = '$merk', mousepad_name = '$tipe', mousepad_img = '$mousepad_img', ukuran = '$ukuranName', bahan = '$bahanName', ketebalan = '$ketebalan', jahitan = '$jahitanName' WHERE mousepad_id = '$id' ");
+    mysqli_query($conn, "UPDATE mousepad SET ukuran_id = '$ukuran' , bahan_id = '$bahan' , ketebalan_id = '$ketebalan_id' , jahitan_id = '$jahitan', harga_id = '$harga_id', merk_id = '$merk', mousepad_name = '$tipe', mousepad_harga = '$harga', mousepad_img = '$mousepad_img', ukuran = '$ukuranName', bahan = '$bahanName', ketebalan = '$ketebalan', jahitan = '$jahitanName' WHERE mousepad_id = '$id' ");
 
     return mysqli_affected_rows($conn);
 }
