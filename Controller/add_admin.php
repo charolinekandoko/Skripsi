@@ -31,7 +31,7 @@ function add($detail){
 
     $password = password_hash($password, PASSWORD_DEFAULT);
 
-    $tambah = mysqli_query($conn, "INSERT INTO admin VALUES('','$email', '$password')");
+    mysqli_query($conn, "INSERT INTO admin VALUES('','$email', '$password')");
     return mysqli_affected_rows($conn);
 }
 ?>
