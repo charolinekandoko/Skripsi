@@ -25,6 +25,8 @@ function edit($mousepad)
 
     $hrga = query("SELECT * FROM harga");
     $ktbln = query("SELECT * FROM ketebalan");
+    $jhtn = query("SELECT * FROM jahitan");
+    $bhn = query("SELECT * FROM bahan");
 
     $merk = $mousepad["merk"];
     $tipe = $mousepad["tipe"];
@@ -45,6 +47,16 @@ function edit($mousepad)
     for ($a = 0; $a < count($ktbln); $a++) {
         if ($ketebalan >= $ktbln[$a]['min_ketebalan'] && $ketebalan <= $ktbln[$a]['max_ketebalan']) {
             $ketebalan_id = $ktbln[$a]['ketebalan_id'];
+        }
+    }
+    for ($a = 0; $a < count($jhtn); $a++) {
+        if ($jahitan == $jhtn[$a]['jahitan_id']) {
+            $jahitanName = $jhtn[$a]['min_jahitan'];
+        }
+    }
+    for ($a = 0; $a < count($bhn); $a++) {
+        if ($bahan == $bhn[$a]['bahan_id']) {
+            $bahanName = $bhn[$a]['min_bahan'];
         }
     }
 

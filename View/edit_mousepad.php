@@ -89,11 +89,6 @@
           </div>
 
           <div class="col-span-full sm:col-span-3">
-            <label for="jahitan_name" class="text-primary text-xl font-medium p-2">Jahitan</label>
-            <input name="jahitan_name" value="<?= $mousepad['jahitan'] ?>" id="jahitan_name" type="text" placeholder="1280x720/1920x1080/..." class="w-full bg-sky-800/25 rounded-lg p-1.5 mt-2">
-          </div>
-
-          <div class="col-span-full sm:col-span-3">
             <label for="jahitan" class="text-primary text-xl font-medium p-2">Jahitan</label>
             <select name="jahitan" id="jahitan" type="text" placeholder="Jahitan" class="w-full bg-sky-800/25 rounded-lg p-1.5 mt-2" require>
               <?php 
@@ -125,11 +120,6 @@
             <input name="img"  id="img" type="file" placeholder="" class="w-full bg-sky-800/25 rounded-lg p-1.5 mt-2">
           </div>
           <input type="hidden" value="<?= $mousepad['mousepad_img'] ?>" name="cek">
-
-          <div class="col-span-full sm:col-span-3">
-            <label for="bahan_name" class="text-primary text-xl font-medium p-2">Bahan</label>
-            <input name="bahan_name" value="<?= $mousepad['bahan'] ?>" id="bahan_name" type="text" placeholder="Bahan" class="w-full bg-sky-800/25 rounded-lg p-1.5 mt-2">
-          </div>
 
           <div class="col-span-full sm:col-span-3">
             <label for="bahan" class="text-primary text-xl font-medium p-2">Bahan</label>

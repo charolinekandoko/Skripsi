@@ -21,6 +21,8 @@ function addmousepad($add)
 
     $hrga = query("SELECT * FROM harga");
     $ktbln = query("SELECT * FROM ketebalan");
+    $jhtn = query("SELECT * FROM jahitan");
+    $bhn = query("SELECT * FROM bahan");
 
     $merk = $add["merk"];
     $tipe = $add["tipe"];
@@ -28,10 +30,10 @@ function addmousepad($add)
     $ukuranName = $add["ukuran_name"];
     $harga = $add["harga"];
     $jahitan = $add["jahitan"];
-    $jahitanName = $add["jahitan_name"];
     $ketebalan = $add["ketebalan"];
     $bahan = $add["bahan"];
-    $bahanName = $add["bahan_name"];
+
+    
     
     for ($a = 0; $a < count($hrga); $a++) {
         if ($harga >= $hrga[$a]['min_harga'] && $harga <= $hrga[$a]['max_harga']) {
@@ -41,6 +43,16 @@ function addmousepad($add)
     for ($a = 0; $a < count($ktbln); $a++) {
         if ($ketebalan >= $ktbln[$a]['min_ketebalan'] && $ketebalan <= $ktbln[$a]['max_ketebalan']) {
             $ketebalan_id = $ktbln[$a]['ketebalan_id'];
+        }
+    }
+    for ($a = 0; $a < count($jhtn); $a++) {
+        if ($jahitan == $jhtn[$a]['jahitan_id']) {
+            $jahitanName = $jhtn[$a]['min_jahitan'];
+        }
+    }
+    for ($a = 0; $a < count($bhn); $a++) {
+        if ($bahan == $bhn[$a]['bahan_id']) {
+            $bahanName = $bhn[$a]['min_bahan'];
         }
     }
 

@@ -62,26 +62,46 @@ require '../Controller/add_mousepad.php';
           <div class="col-span-full sm:col-span-3">
             <label for="ukuran" class="font-semibold text-lg">Ukuran</label>
               <select name="ukuran" id="ukuran" type="text" placeholder="Ukuran" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
-                <Option value="" disabled selected></Option>
+                <!-- <Option value="" disabled selected></Option>
                 <Option value="1"> > 260x215 (S)</Option>
                 <Option value="2">261x216 - 360x300 (M)</Option>
                 <Option value="3">361x301 - 460x400 (L)</Option>
                 <Option value="4">461x401 - 900x400 (XL)</Option>
-                <Option value="5">901x401 - 1220x590 (3XL)</Option>
+                <Option value="5">901x401 - 1220x590 (3XL)</Option> -->
+                <?php 
+                  $ukr = query("SELECT * FROM ukuran");
+
+                  foreach($ukr as $size):
+                  ?>
+                  <Option value="" disabled selected></Option>
+                  <option value="<?=$size['ukuran_id']?>"><?= $size['min_ukuran']?> - <?= $size['max_ukuran']?></option>
+                  <?php
+                  endforeach;
+                ?>
               </select>
           </div>
       
-          <div class="col-span-full sm:col-span-3">
+          <!-- <div class="col-span-full sm:col-span-3">
             <label for="jahitan_name" class="font-semibold text-lg">Jahitan</label>
             <input name="jahitan_name" id="jahitan_name" type="text" placeholder="Jahitan" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
-          </div>
+          </div> -->
           
           <div class="col-span-full sm:col-span-3">
             <label for="jahitan" class="font-semibold text-lg">Jahitan</label>
               <select name="jahitan" id="jahitan" type="text" placeholder="Jahitan" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
-                <Option value="" disabled selected></Option>
+                <!-- <Option value="" disabled selected></Option>
                 <Option value="2">Tidak ada</Option>
-                <Option value="1">Ada</Option>
+                <Option value="1">Ada</Option> -->
+                <?php 
+                  $jht = query("SELECT * FROM jahitan");
+
+                  foreach($jht as $jhtn):
+                  ?>
+                  <Option value="" disabled selected></Option>
+                  <option value="<?=$jhtn['jahitan_id']?>"><?= $jhtn['min_jahitan']?></option>  
+                  <?php
+                  endforeach;
+                ?>
               </select> 
           </div>
           
@@ -96,17 +116,27 @@ require '../Controller/add_mousepad.php';
             <input name="img" id="img" type="file" placeholder="" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
           </div>
 
-          <div class="col-span-full sm:col-span-3">
+          <!-- <div class="col-span-full sm:col-span-3">
             <label for="bahan_name" class="font-semibold text-lg">Bahan</label>
             <input name="bahan_name" id="bahan_name" type="text" placeholder="Bahan" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
-          </div>
+          </div> -->
 
           <div class="col-span-full sm:col-span-3">
             <label for="bahan" class="font-semibold text-lg">Bahan</label>
               <select name="bahan" id="bahan" type="text" placeholder="Bahan" class="w-full bg-sky-800/25 rounded-lg p-2 mt-2 text-black">
-                <Option value="" disabled selected></Option>
+                <!-- <Option value="" disabled selected></Option>
                 <Option value="2">Hardpad</Option>
-                <Option value="1">Clothpad</Option>
+                <Option value="1">Clothpad</Option> -->
+                <?php 
+                  $bhn = query("SELECT * FROM bahan");
+
+                  foreach($bhn as $bh):
+                  ?>
+                  <Option value="" disabled selected></Option>
+                  <option value="<?=$bh['bahan_id']?>"><?= $bh['min_bahan']?></option>  
+                  <?php
+                  endforeach;
+                ?>
               </select> 
           </div>          
 
