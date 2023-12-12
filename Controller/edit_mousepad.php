@@ -34,10 +34,8 @@ function edit($mousepad)
     $ukuranName = $mousepad["ukuran_name"];
     $harga = $mousepad["harga"];
     $jahitan = $mousepad["jahitan"];
-    $jahitanName = $mousepad["jahitan_name"];
     $ketebalan = $mousepad["ketebalan"];
     $bahan = $mousepad["bahan"];
-    $bahanName = $mousepad["bahan_name"];
     
     for ($a = 0; $a < count($hrga); $a++) {
         if ($harga >= $hrga[$a]['min_harga'] && $harga <= $hrga[$a]['max_harga']) {
