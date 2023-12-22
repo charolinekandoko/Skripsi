@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2023 at 04:57 PM
+-- Generation Time: Dec 22, 2023 at 09:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -63,8 +63,8 @@ CREATE TABLE `bahan` (
 --
 
 INSERT INTO `bahan` (`bahan_id`, `min_bahan`, `max_bahan`, `bobot_bahan`) VALUES
-(1, 'Hardpad', 'Hardpad', 1),
-(2, 'Clothpad', 'Clothpad', 2);
+(1, 'Clothpad', 'Clothpad', 1),
+(2, 'Hardpad', 'Hardpad', 2);
 
 -- --------------------------------------------------------
 
@@ -108,8 +108,8 @@ CREATE TABLE `jahitan` (
 --
 
 INSERT INTO `jahitan` (`jahitan_id`, `min_jahitan`, `max_jahitan`, `bobot_jahitan`) VALUES
-(1, 'Tidak ada', 'Tidak ada', 1),
-(2, 'Ada', 'Ada', 2);
+(1, 'Ada', 'Ada', 1),
+(2, 'Tidak ada', 'Tidak ada', 2);
 
 -- --------------------------------------------------------
 
